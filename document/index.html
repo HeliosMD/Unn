@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function validateFORM() {
+				var n = document.forms["onu"]["NAM"].value;
+				if (n==null || n=="") {
+					alert("Name must be filled out.");
+				        return false;
+				}
+				var i= document.forms["onu"]["IDN"].value;
+				if (i==null || i=="") {
+					alert("Indentication Number not addressed, UN# will be used instead.");
+			        	return;
+				}
+				var i= document.forms["onu"]["VNU"].value;
+				if (i==null || i=="") {
+					alert("Voluntary Number not specified. Please fill VNU field.");
+			        	return;
+				}
+			}
+		</script>
+	</head>
+	<body bgcolor="#6689CB" text="#ffffff">
+		<center><br>
+			<img src="unn/onu.jpg" width="150"><br>
+			<form name="onu" action="unn/index.php" onsubmit="return validateFORM()" method="post">
+			<small>
+				Secretary:<input type="radio" name="DC" value="01" id="DC"> &nbsp;&nbsp; 
+				International Justice Council:<input type="radio" name="DC" value="02" id="DC"> &nbsp;&nbsp;
+				Fiducidary Administration Council:<input type="radio" name="DC" value="03" id="DC">
+				<br>
+				Economic & Social Council:<input type="radio" name="DC" value="04" id="DC"> &nbsp;&nbsp;
+				Security Council:<input type="radio" name="DC" value="05" id="DC"> &nbsp;&nbsp;
+				General Assembly:<input type="radio" name="DC" value="06" id="DC">
+
+				<br><br>
+
+				Decolonization & Political Special Affairs:<input type="radio" name="DC" value="07" id="DC"> &nbsp;&nbsp; 
+				Budget & Administrative Affairs:<input type="radio" name="DC" value="08" id="DC"> &nbsp;&nbsp;
+
+				<!--br-->
+
+				Judiric Affairs:<input type="radio" name="DC" value="09" id="DC"> &nbsp;&nbsp;<br/>
+				Financial & Economic Affairs:<input type="radio" name="DC" value="10" id="DC"> &nbsp;&nbsp;
+				Social, Humanitarian & Cultural Affairs:<input type="radio" name="DC" value="11" id="DC"> &nbsp;&nbsp; 
+
+				<br>
+
+				International Security & Dissarm:<input type="radio" name="DC" value="12" id="DC">
+				Voluntary Work:<input type="radio" name="DC" value="13" id="DC">
+
+				<br><br></small><br />
+				NAME: <input type="text" name="NAM" id="NAM" size="42">&nbsp;&nbsp;<!--br><br-->
+				ID#: <input type="text" name="IDN" id="IDN">&nbsp;&nbsp;<!--br><br-->VNU: <input type="text" name="VNU" id="VNU">
+				<br /><br /><small>
+                                ID Number refers either to international identification (Passport) or national identification (DNI).&nbsp;&nbsp;
+				Voluntary: <input type="checkbox" name="VOL"> &nbsp;&nbsp; 
+				Generate: <input type="submit" name="GEN" value="Submit"></small>
+			</form>
+			<small><small><br />
+			Helios Martinez Dominguez (L) Copyleft 2014~2016.
+		</center>
+	</body>
+</html>
